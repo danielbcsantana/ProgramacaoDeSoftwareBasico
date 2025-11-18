@@ -1,0 +1,37 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-180,-128" rotation="0" hflip="1" vflip="1" label="ATmega328" idLabPos="-9.66271,-19.661" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../Microchip (ATMEGA)/LigarLedNegado/LigarLedNegado/Debug/LigarLedNegado.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="false" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,-48" rotation="0" hflip="-1" vflip="1" label="Led-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-5" mainComp="false" Show_id="true" Show_Val="false" Pos="-8,-88" rotation="720" hflip="1" vflip="1" label="5V" idLabPos="-4.36729,-27.9175" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Resistor" CircId="Resistor-8" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="76,-48" rotation="0" hflip="1" vflip="1" label="Resistor-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="TextComponent" CircId="TextComponent-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-248,-188" rotation="0" hflip="1" vflip="1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="Acender LED - PB5 &#xa;Acender LED (NEGATIVO) - PB4" />
+
+<item itemtype="TextComponent" CircId="TextComponent-10" mainComp="false" Show_id="false" Show_Val="false" Pos="-244,12" rotation="0" hflip="1" vflip="1" label="Perna maior &#x3D Cátodo (+)                                    Perna menor &#x3D Ânodo (-)" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="Perna maior &#x3D ANODO (+)  -  5V&#xa;Perna menor &#x3D CATODO (-) -  GND" />
+
+<item itemtype="Resistor" CircId="Resistor-12" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-88,-24" rotation="0" hflip="1" vflip="1" label="Resistor-12" idLabPos="-16,-24" labelrot="0" valLabPos="-10.8519,4.97038" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Ground" CircId="Ground-13" mainComp="false" Show_id="false" Show_Val="false" Pos="96,-24" rotation="270" hflip="1" vflip="1" label="Ground-13" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-14" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,-24" rotation="0" hflip="1" vflip="1" label="Led-14" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="TextComponent" CircId="TextComponent-18" mainComp="false" Show_id="false" Show_Val="false" Pos="20,-120" rotation="0" hflip="1" vflip="1" label="TextComponent-18" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="Positivo" />
+
+<item itemtype="TextComponent" CircId="TextComponent-19" mainComp="false" Show_id="false" Show_Val="false" Pos="16,-8" rotation="0" hflip="1" vflip="1" label="TextComponent-19" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="Negativo" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Resistor-8-rPin" endpinid="Fixed Voltage-5-outnod" pointList="92,-48,92,-88,8,-88" />
+
+<item itemtype="Connector" uid="Connector-22" startpinid="Led-2-lPin" endpinid="Resistor-8-lPin" pointList="8,-48,60,-48" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="mega328-1-PORTB5" endpinid="Led-2-rPin" pointList="-140,-48,-24,-48" />
+
+<item itemtype="Connector" uid="Connector-25" startpinid="Resistor-12-rPin" endpinid="Led-14-lPin" pointList="-72,-24,-24,-24" />
+
+<item itemtype="Connector" uid="Connector-27" startpinid="mega328-1-PORTB2" endpinid="Resistor-12-lPin" pointList="-140,-24,-104,-24" />
+
+<item itemtype="Connector" uid="Connector-24" startpinid="Led-14-rPin" endpinid="Ground-13-Gnd" pointList="8,-24,80,-24" />
+
+</circuit>
