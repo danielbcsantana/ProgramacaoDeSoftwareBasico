@@ -1,0 +1,27 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Led" CircId="Led-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-52,-48" rotation="0" hflip="-1" vflip="1" label="Led-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-108,-48" rotation="0" hflip="1" vflip="1" label="Resistor-2" idLabPos="-16,-24" labelrot="0" valLabPos="-10.8519,4.97038" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="TextComponent" CircId="TextComponent-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-232,-176" rotation="0" hflip="1" vflip="1" label="TextComponent-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="Acender LED (NEGATIVO)" />
+
+<item itemtype="TextComponent" CircId="TextComponent-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-244,8" rotation="0" hflip="1" vflip="1" label="TextComponent-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="Perna maior &#x3D ANODO (+)    -  5V&#xa;Perna menor &#x3D CATODO (-)  - GND" />
+
+<item itemtype="MCU" CircId="mega328-5" mainComp="false" Show_id="true" Show_Val="false" Pos="-180,-128" rotation="0" hflip="1" vflip="1" label="mega328-5" idLabPos="-9.66271,-19.227" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../Microchip (ATMEGA)/GitHub/LigarLedNegado/LigarLedNegado/Debug/LigarLedNegado.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-7" mainComp="false" Show_id="true" Show_Val="false" Pos="-92,-104" rotation="0" hflip="1" vflip="1" label="5V" idLabPos="-5.03682,5.92162" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Node" CircId="Node-9" mainComp="false" Pos="-68,-48" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="mega328-5-PORTB5" endpinid="Resistor-2-lPin" pointList="-140,-48,-124,-48" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Led-1-lPin" endpinid="Fixed Voltage-7-outnod" pointList="-36,-48,-24,-48,-24,-104,-76,-104" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Resistor-2-rPin" endpinid="Node-9-1" pointList="-92,-48,-68,-48" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Led-1-rPin" endpinid="Node-9-0" pointList="-68,-48,-68,-48" />
+
+<item itemtype="Connector" uid="Connector-15" startpinid="Node-9-2" endpinid="Led-1-rPin" pointList="-68,-48,-68,-48" />
+
+</circuit>
