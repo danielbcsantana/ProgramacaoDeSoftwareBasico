@@ -1,0 +1,42 @@
+; PiscarLed.asm
+; Created: 18/11/2025 
+; Author : Daniel Santana
+; Descrição: Código para piscar LED (pb5) a cada 1s
+
+INICIO:
+	
+	LDI R16, 0b00100000
+	OUT DDRB, R16
+
+LOOP:
+
+	LDI R16, 0b00100000
+	OUT PORTB, R16
+	RCALL ATRASO
+	LDI R16, 0b00000000
+	OUT PORTB, R16
+	RCALL ATRASO
+	RJMP LOOP
+	
+ATRASO:
+
+	LDI R17, 40
+L1:	LDI R18, 5
+L2:	LDI R19, 100
+L3:	LDI R20, 200
+	
+L4: DEC R20
+	NOP
+	BRNE L4
+
+	DEC R19
+	BRNE L3
+
+	DEC R18
+	BRNE L2
+	
+	DEC R17
+	BRNE L1
+
+	RET
+
